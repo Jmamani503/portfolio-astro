@@ -1,0 +1,45 @@
+---
+const personalImageAlt = "Miguel Ángel";
+---
+
+<div class="my-16">
+  <h3
+    class="max-w-max font-bold text-4xl mb-6 text-[#00BD95]"
+  >
+    About me
+  </h3>
+  <article
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  >
+    <div
+      class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal text-pretty order-2 md:order-1"
+    >
+    <strong></strong>
+      <p class="text-base">
+        Hi, I’m <strong>Jaime Mamani Navarro</strong>, a Systems Engineering graduate from Universidad Mayor de San Simón, currently working toward my degree. As an aspiring <strong>Web Developer</strong>, I’m passionate about crafting beautiful, user-friendly web experiences, supported by a strong foundation in problem-solving, programming, and technology
+      </p>
+      <!-- <p class="text-base">
+        My journey into web development began with a curiosity for how things work on the internet, which led me to dive deep into HTML, CSS, and JavaScript. Today, I’m focused on mastering frontend tools like React, Astro, and Tailwind CSS to create responsive, fast, and visually appealing websites. I love turning ideas into code and thrive on the challenge of making the web more accessible and enjoyable for everyone.
+      </p> -->
+      <p class="text-base">
+        When I’m not coding, you can find me <strong>exploring new tech trends</strong>, sipping coffee, or working on personal projects to sharpen my skills. I’m excited to grow as a developer and collaborate on impactful projects!
+      </p>
+      <!-- <p>
+        Como creador de contenido, <strong
+          >cuento con el canal de habla hispana más visto del mundo en la
+          categoría de <em class="italic">Software & Game Development</em> en Twitch</strong
+        >. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
+        acceso a contenido de calidad.
+      </p> -->
+    </div>
+
+    <img
+      width="200"
+      height="200"
+      src="/yo xd.jpg"
+      alt={personalImageAlt}
+      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+      style="object-position: 50% 50%"
+    />
+  </article>
+</div>

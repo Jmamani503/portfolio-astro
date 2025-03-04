@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Currently...",
+    title: "Seeking New Opportunities",
+    company: "",
+    description:
+      "I’m actively building my skills through personal projects  and exploring technologies such as Astro, React, and Tailwind CSS. I’m eager to join a team where I can contribute, learn, and grow while delivering impactful web solutions.",
+  },
+  {
+    date: "Aug 2024 - Dec 2024",
+    title: "Fullstack Developer - Intership",
+    company: "NAABOL – Navegación Aérea y Aeropuertos Bolivianos",
+    description:
+      "Developed a platform for vehicle registration and billing in private airport parking, enhancing operational efficiency. Implemented role and permission management, a dynamic reporting system for personalized data.",
+  },
+ 
+]
+---
+<ol class="relative">
+  <h3 class="max-w-max font-bold text-4xl mb-10 text-[#00BD95]">Experience</h3>
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="">
+          <ExperienceItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+

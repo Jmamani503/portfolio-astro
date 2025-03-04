@@ -1,0 +1,153 @@
+---
+import Github from "../icons/Github.astro";
+import NextJS from "../icons/NextJS.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import React from "../icons/React.astro";
+import Angular from "../icons/Angular.astro";
+import Astro2 from "../icons/Astro2.astro";
+import Nest from "../icons/Nest.astro";
+import Link from "../icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Supabase from "../icons/Supabase.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#4D7B8D] text-white",
+    icon: React,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#121214] text-white",
+    icon: Angular,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#240D45] text-white",
+    icon: Astro2,
+  },
+  NEST: {
+    name: "Nest",
+    class: "bg-[#240D45] text-white",
+    icon: Nest,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-black text-white",
+    icon: Supabase,
+  },
+};
+
+const TECHSTACK = [TAGS.ANGULAR, TAGS.ASTRO, TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND, TAGS.NEST];
+
+const PROJECTS = [
+  {
+    title: "Realmatic Archive - A spoiler-safe fan art platform for Cosmere fans",
+    description:
+      "Realmatic Archive is a fan-driven platform where Cosmere enthusiasts can explore, share, and appreciate fan art—spoiler-free.",
+    link: "https://realmatic-archive-react.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/realmatic.webp",
+    tags: [TAGS.REACT, TAGS.SUPABASE, TAGS.TAILWIND],
+  },
+  {
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "/projects/cover.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.ANGULAR],
+  },
+];
+---
+<div>
+  <h3
+    class="max-w-max font-bold text-4xl mb-10 text-[#00BD95]"
+  >
+    Projects
+  </h3>
+  <div class="flex flex-col gap-y-12 pb-8">
+    {
+      PROJECTS.map(({ image, title, description, tags, link, github }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 bg-[#2E3748] p-6 rounded-lg">
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-xl font-bold text-[#e6c259] text-pretty">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <p class="mt-2 text-gray-700 dark:text-white text-sm text-pretty">
+                {description}
+              </p>
+              <footer class="flex items-end justify-end w-full mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <Github class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Demo
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+  <div class="flex flex-col justify-center items-center gap-4">
+    <h3 class="text-2xl text-[#e6c259] font-bold">Tech Stack</h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+        {
+          TECHSTACK.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-12" />
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

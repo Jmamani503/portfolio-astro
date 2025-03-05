@@ -1,13 +1,11 @@
 ---
 import Github from "../icons/Github.astro";
 import Linkedin from "../icons/Linkedin.astro";
-import CurriculumVitae from "../icons/CurriculumVitae.astro";
 import Mail from "../icons/Mail.astro";
-import Link from "../icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<div class="max-w-2xl py-52">
+<div class="max-w-2xl pt-36 md:pt-72 pb-36">
     <h3 class="text-2xl font-light">
       Hey there!, I'm 
       <strong class= "font-bold">
@@ -18,22 +16,24 @@ import LinkButton from "./LinkButton.astro";
     <p class="text-base py-6 font-thin">
         Looking for opportunities to apply my skills in challenging projects while growing both personally and professionally. Committed to contributing to the success of teams and projects.
     </p>
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col gap-6 justify-between md:items-center sm:flex-row">
       <LinkButton>
-        View My Resume
+        View Resume
       </LinkButton>
       <ul class="flex gap-4">
         <li>
-          <a href="https://x.com/home"></a>
-          <Github
-            class="w-8 h-8 transform transition-transform duration-300 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-[#00BD95]"
-          />
+          <a href="https://github.com/Jmamani503" target="_blank">
+            <Github
+              class="w-8 h-8 transform transition-transform duration-300 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-[#00BD95]"
+            />
+          </a>
         </li>
         <li>
-          <a href=""></a>
-          <Linkedin
-          class="w-8 h-8 transform transition-transform duration-300 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-[#00BD95]"
-          />
+          <a href="www.linkedin.com/in/jaimemamaninavarro" target="_blank">
+            <Linkedin
+            class="w-8 h-8 transform transition-transform duration-300 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-[#00BD95]"
+            />
+          </a>
         </li>
         <li>
           <a href=""></a>

@@ -10,7 +10,7 @@ import HomeSection from '../components/HomeSection.astro';
 ---
 
 <Layout title="Jaime Mamani Navarro | Frontend Developer">
-	<main class="flex flex-col gap-32">
+	<main class="flex flex-col gap-32 w-screen">
 		<SectionContainer id="home">
 			<HomeSection/>
 		</SectionContainer>
@@ -29,13 +29,10 @@ import HomeSection from '../components/HomeSection.astro';
 <style>
 	main {
 		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
+		width: 800px; 
+		/* max-width: calc(100% - 2rem); */
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	
-
 </style>

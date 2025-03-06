@@ -70,21 +70,21 @@ const PROJECTS = [
   },
 ];
 ---
-<div>
+<div class="">
   <h3
     class="max-w-max font-bold text-4xl mb-10 text-[#00BD95]"
   >
     Projects
   </h3>
-  <div class="flex flex-col gap-y-12 pb-8">
+  <div class="w-full flex flex-col gap-y-12 pb-8">
     {
       PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 bg-[#2E3748] p-6 rounded-lg">
-          <div class="w-full md:w-1/2">
-            <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl rounded-xl overflow-hidden md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+          <div class="w-full md:w-1/2 flex items-center justify-center">
+            <div class="flex flex-col items-center justify-center rounded-xl overflow-hidden">
               <img
                 alt="Recién llegado vs 5 años en Nueva Zelanda"
-                class="object-cover object-top w-full h-full transition duration-500 md:scale-110 md:group-hover:scale-105"
+                class="object-cover h-full w-full max-h-64 "
                 loading="lazy"
                 src={image}
               />
@@ -109,7 +109,7 @@ const PROJECTS = [
                 ))}
               </ul>
 
-              <p class="mt-2 text-gray-700 dark:text-white text-sm text-pretty">
+              <p class="mt-2 text-gray-700 dark:text-white font-light text-base text-pretty">
                 {description}
               </p>
               <footer class="flex items-end justify-end w-full mt-4 gap-x-4">
@@ -135,7 +135,7 @@ const PROJECTS = [
   <div class="flex flex-col justify-center items-center gap-4">
     <h3 class="text-2xl text-[#e6c259] font-bold">Tech Stack</h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+      <ul class="flex flex-row flex-wrap mb-2 gap-2 justify-center">
         {
           TECHSTACK.map((tag) => (
             <li>
